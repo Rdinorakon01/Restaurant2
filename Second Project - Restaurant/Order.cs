@@ -18,5 +18,10 @@ namespace Second_Project___Restaurant
         public void SubtructQuantity()
         { }
 
+        public void Test()
+        {
+
+        }
+
     }
 }
