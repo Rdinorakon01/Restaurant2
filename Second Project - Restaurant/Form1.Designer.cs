@@ -49,22 +49,24 @@
             this.chickenRadioButton1.AutoSize = true;
             this.chickenRadioButton1.Location = new System.Drawing.Point(22, 37);
             this.chickenRadioButton1.Name = "chickenRadioButton1";
-            this.chickenRadioButton1.Size = new System.Drawing.Size(154, 21);
+            this.chickenRadioButton1.Size = new System.Drawing.Size(147, 20);
             this.chickenRadioButton1.TabIndex = 1;
             this.chickenRadioButton1.TabStop = true;
             this.chickenRadioButton1.Text = "How many chicken?";
             this.chickenRadioButton1.UseVisualStyleBackColor = true;
+            this.chickenRadioButton1.CheckedChanged += new System.EventHandler(this.chickenRadioButton1_CheckedChanged);
             // 
             // eggRadioButton2
             // 
             this.eggRadioButton2.AutoSize = true;
-            this.eggRadioButton2.Location = new System.Drawing.Point(22, 76);
+            this.eggRadioButton2.Location = new System.Drawing.Point(22, 75);
             this.eggRadioButton2.Name = "eggRadioButton2";
-            this.eggRadioButton2.Size = new System.Drawing.Size(134, 21);
+            this.eggRadioButton2.Size = new System.Drawing.Size(128, 20);
             this.eggRadioButton2.TabIndex = 2;
             this.eggRadioButton2.TabStop = true;
             this.eggRadioButton2.Text = "How many egg ?";
             this.eggRadioButton2.UseVisualStyleBackColor = true;
+            this.eggRadioButton2.CheckedChanged += new System.EventHandler(this.eggRadioButton2_CheckedChanged);
             // 
             // MenuGroupBox1
             // 
@@ -84,7 +86,7 @@
             // drinksComboBox1
             // 
             this.drinksComboBox1.FormattingEnabled = true;
-            this.drinksComboBox1.Location = new System.Drawing.Point(242, 54);
+            this.drinksComboBox1.Location = new System.Drawing.Point(242, 57);
             this.drinksComboBox1.Name = "drinksComboBox1";
             this.drinksComboBox1.Size = new System.Drawing.Size(271, 24);
             this.drinksComboBox1.TabIndex = 6;
@@ -111,6 +113,7 @@
             this.receiveRequestButton1.TabIndex = 3;
             this.receiveRequestButton1.Text = "Receive this request from a Customer";
             this.receiveRequestButton1.UseVisualStyleBackColor = true;
+            this.receiveRequestButton1.Click += new System.EventHandler(this.receiveRequestButton1_Click);
             // 
             // sendCustomerRequestButton2
             // 
@@ -120,22 +123,24 @@
             this.sendCustomerRequestButton2.TabIndex = 4;
             this.sendCustomerRequestButton2.Text = "Send all Customers requests to the Cook";
             this.sendCustomerRequestButton2.UseVisualStyleBackColor = true;
+            this.sendCustomerRequestButton2.Click += new System.EventHandler(this.sendCustomerRequestButton2_Click);
             // 
             // servePreparedFoodButton3
             // 
-            this.servePreparedFoodButton3.Location = new System.Drawing.Point(101, 348);
+            this.servePreparedFoodButton3.Location = new System.Drawing.Point(101, 346);
             this.servePreparedFoodButton3.Name = "servePreparedFoodButton3";
             this.servePreparedFoodButton3.Size = new System.Drawing.Size(406, 27);
             this.servePreparedFoodButton3.TabIndex = 5;
             this.servePreparedFoodButton3.Text = "Serve prepared food to the Customer";
             this.servePreparedFoodButton3.UseVisualStyleBackColor = true;
+            this.servePreparedFoodButton3.Click += new System.EventHandler(this.servePreparedFoodButton3_Click);
             // 
             // eggQualityLabel1
             // 
             this.eggQualityLabel1.AutoSize = true;
             this.eggQualityLabel1.Location = new System.Drawing.Point(79, 303);
             this.eggQualityLabel1.Name = "eggQualityLabel1";
-            this.eggQualityLabel1.Size = new System.Drawing.Size(85, 17);
+            this.eggQualityLabel1.Size = new System.Drawing.Size(79, 16);
             this.eggQualityLabel1.TabIndex = 6;
             this.eggQualityLabel1.Text = "Egg Quality:";
             // 
@@ -144,7 +149,7 @@
             this.eggQualityLabel2.AutoSize = true;
             this.eggQualityLabel2.Location = new System.Drawing.Point(172, 303);
             this.eggQualityLabel2.Name = "eggQualityLabel2";
-            this.eggQualityLabel2.Size = new System.Drawing.Size(72, 17);
+            this.eggQualityLabel2.Size = new System.Drawing.Size(63, 16);
             this.eggQualityLabel2.TabIndex = 7;
             this.eggQualityLabel2.Text = "________";
             // 
@@ -163,7 +168,7 @@
             this.resultLabel1.AutoSize = true;
             this.resultLabel1.Location = new System.Drawing.Point(40, 383);
             this.resultLabel1.Name = "resultLabel1";
-            this.resultLabel1.Size = new System.Drawing.Size(48, 17);
+            this.resultLabel1.Size = new System.Drawing.Size(45, 16);
             this.resultLabel1.TabIndex = 9;
             this.resultLabel1.Text = "Result";
             // 

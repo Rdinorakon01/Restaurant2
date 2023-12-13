@@ -19,7 +19,7 @@ namespace Second_Project___Restaurant
             {
                 singleOrder[i] = MenuItem.Chicken;
             }
-            Array.Resize(ref requests[], 8);
+            Array.Resize(ref requests, requests.Length + 1);
 
             for (int j = 0; j < eggQuantity; j++)
             {
@@ -53,13 +53,33 @@ namespace Second_Project___Restaurant
                     }
                 }
             }
-            chicken = cook.SubmitRequest(chickenQuantity, MenuItem.Chicken);
-            cook.PrepareFood(chicken);
-            egg = cook.SubmitRequest(eggQuantity, MenuItem.Egg);
-            cook.PrepareFood(egg);
+            chicken = cook.SubmitRequest(MenuItem.Chicken, chickenQuantity);
+            cook.PrepareFood((Order)chicken);
+            egg = cook.SubmitRequest(MenuItem.Egg, eggQuantity);
+            cook.PrepareFood((Order)egg);
         }
-        public void Serve()
+        public string Serve()
         {
+            int chickenQuantity = 0;
+            int eggQuantity = 0;
+            string result = "";
+            int countCostomer = 0;
+            Drinks[] drinks = new Drinks[6];
+            foreach (MenuItem[] elem in requests)
+            {
+                string drinkName = "No drink";
+                for (int i = 0; i < elem.Length; i++)
+                {
+                    if (elem[i] == MenuItem.Chicken)
+                    { chickenQuantity++; }
+                    if (elem[i] == MenuItem.Egg) { eggQuantity++; }
+                }
+                drinkName = elem[elem.Length - 1].ToString();
+                countCostomer++;
+                result += $"Customer {countCostomer} is served {chickenQuantity} chicken," +
+                    $" {eggQuantity} egg, {drinkName.Replace(drinkName, result) }"; 
+            }
+            return result;
         }
     }
 }
